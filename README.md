@@ -16,7 +16,7 @@ docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.11.9-management
   If everything works you will see the message in the browser:
   "The message was sent to Message broker!!!"
   
-4. To test Json functionality create Post request with Postman. 
+4. To test Json functionality create Post request as a body parameter with Postman. 
   Copy link below into Postman:
   http://localhost:8080/api/v1/student
   Provide json parameters into post request for example:
@@ -33,3 +33,4 @@ docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.11.9-management
    
    In IntelliJ Console you will see the following message:
    Student info was sent -> [ Student(facultyNumber=1, firstName=Stefan, lastName=Petkov, speciality=SAS, course=1) ]
+   Received Student message -> [ Student(facultyNumber=1, firstName=Stefan, lastName=Petkov, speciality=SAS, course=1) ]
