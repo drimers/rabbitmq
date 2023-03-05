@@ -1,4 +1,4 @@
-How to setup Message broker for example RabbitMQ
+ Spring boot project with RabbitMQ.
 
 1. Install docker depending on your OS.
    https://www.docker.com/
