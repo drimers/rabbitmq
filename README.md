@@ -27,3 +27,9 @@ docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.11.9-management
    "speciality": "SAS",
    "course": "1"
    }
+
+    In Postman you will see the following message:
+    The student's message was sent to the Message broker as json!!!
+   
+   In IntelliJ Console you will see the following message:
+   Student info was sent -> [ Student(facultyNumber=1, firstName=Stefan, lastName=Petkov, speciality=SAS, course=1) ]
