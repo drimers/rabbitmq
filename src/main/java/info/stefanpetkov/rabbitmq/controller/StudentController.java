@@ -10,11 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1")
-public class MessageStudentController {
+public class StudentController {
 
     private StudentsProducer studentsProducer;
 
-    public MessageStudentController(StudentsProducer studentsProducer) {
+    public StudentController(StudentsProducer studentsProducer) {
         this.studentsProducer = studentsProducer;
     }
 

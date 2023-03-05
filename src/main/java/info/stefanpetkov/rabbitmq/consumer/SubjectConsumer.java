@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class RabbitMQConsumer {
+public class SubjectConsumer {
 
     @RabbitListener(queues = {"${rabbitmq.queue.name}"})
     public void consumer(String message){

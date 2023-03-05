@@ -15,6 +15,10 @@ docker run --rm -it -p 15672:15672 -p 5672:5672 rabbitmq:3.11.9-management
 
   If everything works you will see the message in the browser:
   "The message was sent to Message broker!!!"
+
+  In IntelliJ Console you will see the following messages:
+  The message was sent [ Software architectures and tools ]
+  Received message -> Software architectures and tools
   
 4. To test Json functionality create Post request as a body parameter with Postman. 
   Copy link below into Postman:

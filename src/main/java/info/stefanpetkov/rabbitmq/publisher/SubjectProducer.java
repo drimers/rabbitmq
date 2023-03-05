@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @Slf4j
-public class RabbitMQProducer {
+public class SubjectProducer {
 
     @Value("${rabbitmq.exchange.name}")
     private String exchange;
@@ -17,12 +17,12 @@ public class RabbitMQProducer {
 
     private RabbitTemplate rabbitTemplate;
 
-    public RabbitMQProducer(RabbitTemplate rabbitTemplate) {
+    public SubjectProducer(RabbitTemplate rabbitTemplate) {
         this.rabbitTemplate = rabbitTemplate;
     }
 
     public void sendMessage(String message){
-        log.info("The message was sent [ {} ]", message);
+        log.info("The message was sent -> [ {} ]", message);
         rabbitTemplate.convertAndSend(exchange,routing_key,message);
     }
 }

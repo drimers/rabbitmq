@@ -42,7 +42,7 @@ public class RabbitMQConfig {
         return new TopicExchange(exchange);
     }
     @Bean
-    public Binding bindingExchangeFMISpeciality(){
+    public Binding bindingExchangeFMISubject(){
         return BindingBuilder.bind(queue()).to(exchange()).with(routing_key);
     }
 
