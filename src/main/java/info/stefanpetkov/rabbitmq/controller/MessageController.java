@@ -17,7 +17,7 @@ public class MessageController {
         this.rabbitMQProducer = rabbitMQProducer;
     }
 
-    //http://localhost:8080/api/v1/sas?student=stefan
+    //  http://localhost:8080/api/v1/sas?student=Stefan%20Petkov
     @GetMapping("sas")
     public ResponseEntity<String> sendMessage(@RequestParam("student") String student){
         rabbitMQProducer.sendMessage(student);
