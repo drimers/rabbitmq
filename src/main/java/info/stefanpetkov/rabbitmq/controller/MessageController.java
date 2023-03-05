@@ -17,10 +17,10 @@ public class MessageController {
         this.rabbitMQProducer = rabbitMQProducer;
     }
 
-    //  http://localhost:8080/api/v1/sas?student=Stefan%20Petkov
+    //  http://localhost:8080/api/v1/sas?student=Software%20architectures%20and%20tools
     @GetMapping("sas")
-    public ResponseEntity<String> sendMessage(@RequestParam("student") String student){
-        rabbitMQProducer.sendMessage(student);
+    public ResponseEntity<String> sendMessage(@RequestParam("subject") String subject){
+        rabbitMQProducer.sendMessage(subject);
         return ResponseEntity.ok("The message was sent to Message broker!!!");
     }
 }
